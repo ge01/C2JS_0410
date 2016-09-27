@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css" />
+    <title>Using the for Loop</title>
+    <meta charset="utf-8">
+    <!-- Bootstrap 3 is mobile-first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- .container-fluid spanning the entire width of viewport -->
+    <div class="container-fluid">
+      <!-- jumbotron inside container to NOT extend to edge of screen -->
+      <div class="jumbotron">
+        <h2 class="text-center">Health Club Membership Menu</h2>
+        <!-- form element defines a form that is used to collect user input -->
+        <form>
+          <ul class="list-group">
+            <li class="list-group-item">1. Standard Adult Membership</li>
+            <li class="list-group-item">2. Child Membership</li>
+            <li class="list-group-item">3. Senior Citizen Membership</li>
+            <li class="list-group-item">4. Quit the Program</li>
+          </ul>
+          <div class="form-group">
+            <label for="membership">Membership:</label>
+            <input id="membership" class="form-control" type="number" onclick="computeChoice" placeholder="Enter 1, 2, 3, or 4" />
+          </div>
+          <div class="form-group">
+            <label for="months">Months:</label>
+            <input id="months" class="form-control" type="number" onclick="computeChoice" placeholder="How many months?" />
+          </div>
+          <!-- Trigger the modal with a button -->
+          <div class = "row text-center">
+            <div class = "col-sm-12">
+              <button id="myBtn" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+              Calculate Charges
+              </button>
+            </div>
+          </div>
+        </form>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">The Speed</h4>
+              </div>
+              <div class="modal-body">
+                <h2 id="outSpeed"></h2>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- NOTE: This tag connects the JS to our HTML-->
+    <script src="app.js"></script>
+  </body>
+</html>
