@@ -13,17 +13,24 @@ var choice;       // Menu choice
 var months;       // Number of months
 var charges;      // Monthly charges
 
-
 function computeChoice() {
-  // Display the table of speeds
-  for (kph = START_SPEED; kph <= END_SPEED; kph += INTERVAL) {
-    // Calculate miles per hour.
-    mph = kph * CONVERSION_FACTOR;
+  // Get the choice
+  choice = parseInt(document.getElementById('choice').value);
 
-    // Display to console the conversion.
-    console.log(kph + " KPH is the same as " + mph.toFixed(2) + " MPH");
+  // Get the months
+  months = parseInt(document.getElementById('months').value);
+
+  // Use the menu selection to execute the correct charges
+  if (choice == 1)
+    charges = months * ADULT_RATE;
+  else if (choice == 2)
+    charges = months * CHILD_RATE;
+  else if (choice == 3)
+    charges = months * SENIOR_RATE;
+  else if (choice > 3) {
+    document.getElementById("outCharges").innerHTML = "The valid choices are 1 through 4. " +
+    "Refresh the app and select one of those.";
   }
-  // Display the last speed conversion
-  document.getElementById('outSpeed').innerHTML = kph + " KPH is the same as " +
-    mph.toFixed(2) + " MPH";
+  // Display the total charges
+  document.getElementById('outCharges').innerHTML = "The total charges are $" + charges.toFixed(2);
 }

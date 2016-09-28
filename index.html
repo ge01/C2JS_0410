@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="mystyle.css" />
-    <title>Using the for Loop</title>
+    <title>Membership Rates</title>
     <meta charset="utf-8">
     <!-- Bootstrap 3 is mobile-first -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,8 +29,8 @@
             <li class="list-group-item">4. Quit the Program</li>
           </ul>
           <div class="form-group">
-            <label for="membership">Membership:</label>
-            <input id="membership" class="form-control" type="number" onclick="computeChoice" placeholder="Enter 1, 2, 3, or 4" />
+            <label for="choice">Membership:</label>
+            <input id="choice" class="form-control" type="choice" onclick="computeChoice" placeholder="Enter 1, 2, 3, or 4" />
           </div>
           <div class="form-group">
             <label for="months">Months:</label>
@@ -52,10 +52,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">The Speed</h4>
+                <h4 class="modal-title">Charges</h4>
               </div>
               <div class="modal-body">
-                <h2 id="outSpeed"></h2>
+                <h2 id="outCharges"></h2>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
